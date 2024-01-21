@@ -70,7 +70,7 @@ int DQSelect(ssize_t kth, It begin, It end) {
     if (i + kBlockSz - 1 > end) {
       *j = DQSelect((end - i) / 2, i, end);
     } else {
-      *j = DQSelect(2, i, i + kBlockSz - 1);
+      *j = DQSelect(kBlockSz / 2, i, i + kBlockSz - 1);
     }
   }
 
